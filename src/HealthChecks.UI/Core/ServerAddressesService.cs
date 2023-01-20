@@ -30,6 +30,8 @@ namespace HealthChecks.UI.Core
             {
                 relativeUrl = $"/{relativeUrl}";
             }
+            
+            targetAddress = targetAddress.Replace("0.0.0.0", "127.0.0.1");
 
             return $"{targetAddress}{relativeUrl}";
         }
